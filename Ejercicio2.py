@@ -5,28 +5,27 @@
 
 class Alumno():
     nombre = ''
-    nota = None
+    nota = 0    
     
+    def ponerNota(self):
+        self.nota = 6.6       
     
-    #Ejemplo con constructor
-    def __init__(self,nombre, nota):
-        print('El nombre del alumno es : ', nombre)
-        print('La nota del alumno es : ', nota)
+    def ponerNombre(self):
+        self.nombre = "Perico de los palotes"
         
-    #Ejemplo con metodos    
-    def ponerNota(self,puntuacion):
-        nota = 6.6
-    
-    def ponerNombre(self,name):
-        nombre = name
-           
-persona = Alumno("Javier Perez Perez", 7.8)
+    def isAprobado(self):
+        print(self.nota)
+        if (self.nota > 5):
+            return("Aprobado")
+        else:
+            return("Suspenso")         
 
 persona2 = Alumno
-persona2.nombre = "Pedro Lopez Lopez"
-persona2.nota = 6.6
+persona2.ponerNombre(persona2)
+persona2.ponerNota(persona2)
 
 print('La nota de ' ,persona2.nombre, 'Es : ',persona2.nota)
+print(persona2.isAprobado(persona2))
 
 
         
